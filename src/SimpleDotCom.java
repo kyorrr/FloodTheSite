@@ -1,4 +1,4 @@
-/* public class SimpleDotCom {
+/*public class SimpleDotCom {
     int[] locationCells;
     int numOfHits = 0;
 
@@ -21,4 +21,5 @@
         System.out.println(result);
         return result;
     }
-} */
+}
+*/

@@ -1,9 +1,23 @@
-/* public class SimpleDotComTestDrive {
-    public static void main(String[] args) {
-    SimpleDotCom dot = new SimpleDotCom();
-    int[] locations = {2,3,4};
-    dot.setLocationCell(locations);
-    String userGuess = "2";
-    String result = dot.checkYourself(userGuess);
-    }
-} */
+ /*public class SimpleDotComTestDrive{
+     public static void main(String[] args) {
+         int numOfGuesses = 0;
+         GameHelperOld helper = new GameHelperOld();
+         SimpleDotCom theDotCom = new SimpleDotCom();
+
+         int randomNum = (int) (Math.random() * 5);
+         int [] locations = {randomNum, randomNum + 1, randomNum + 2};
+
+         theDotCom.setLocationCells(locations);
+         boolean isAlive = true;
+         while(isAlive == true){
+             String guess = helper.getUserInput("Введите число: ");
+             String result = theDotCom.checkYourself(guess);
+             numOfGuesses++;
+
+             if(result.equals("Потопил")){
+                 isAlive = false;
+                 System.out.println("Вам потребовалось " + numOfGuesses + " попыток(и)");
+             }
+         }
+     }
+ }*/
