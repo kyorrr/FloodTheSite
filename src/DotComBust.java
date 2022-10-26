@@ -1,4 +1,4 @@
-/*import java.util.*;
+import java.util.*;
 
 public class DotComBust {
 
@@ -13,17 +13,25 @@ public class DotComBust {
         two.setName("eToys.com");
         SuperDotCom three = new SuperDotCom();
         three.setName("Go2.com");
+        SuperDotCom four = new SuperDotCom();
+        four.setName("Mihal");
+        SuperDotCom five = new SuperDotCom();
+        five.setName("Sanich");
+
         superDotComList.add(one);
         superDotComList.add(two);
         superDotComList.add(three);
+        superDotComList.add(four);
+        superDotComList.add(five);
 
-        System.out.println("Ваша цель - потопить три 'сайта'.");
-        System.out.println("Pets.com, eToys.com, Go2.com");
+
+        System.out.println("Ваша цель - потопить 5 'сайтов'.");
+        System.out.println("Pets.com, eToys.com, Go2.com, Mihal, Sanich");
         System.out.println("Попытайтесь потопить их за минимальное количество ходов");
 
         for(SuperDotCom superDotComToSet: superDotComList){
 
-            ArrayList<String> newLocation = helper.placeSuperDotCom(3);
+            ArrayList<String> newLocation = helper.placeSuperDotCom(5);
 
             superDotComToSet.setLocationCells(newLocation);
         }
@@ -32,8 +40,8 @@ public class DotComBust {
         while (!superDotComList.isEmpty()){
             String userGuess = helper.getUserInput("Сделайте ход");
             checkUserGuess(userGuess);
+            finishGame();
         }
-        finishGame();
     }
     private void checkUserGuess(String userGuess){
         numOfGuesses++;
@@ -54,11 +62,7 @@ public class DotComBust {
         System.out.println(result);
     }
     private void finishGame(){
-        System.out.println("Все 'сайты' ушли ко дну! Ваши акции теперь ничего не стоят.");
-        if(numOfGuesses <= 18){
-            System.out.println("Это заняло у вас всего " + numOfGuesses + " попыток.");
-            System.out.println("Вы успели выбраться до того, как ваши вложения утонули.");
-        } else {
+        if(numOfGuesses == 2){
             System.out.println("Это заняло у вас довольно много времени. " + numOfGuesses + " попыток");
             System.out.println("Рыбы водят хороводы вокруг ваших вложений.");
         }
@@ -70,4 +74,3 @@ public class DotComBust {
         game.startPlaying();
     }
 }
-*/

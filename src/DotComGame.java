@@ -7,11 +7,13 @@ public class DotComGame {
         DotCom theDotCom = new DotCom();
         int randomNum = (int) (Math.random() * 5);
         int [] locations = {randomNum, randomNum + 1, randomNum + 2};
+
         ArrayList<String> locations2 = new ArrayList<>();
         for(int i = 0; i < locations.length; i++){
             locations2.add(i, String.valueOf(locations[i]));
         }
         theDotCom.setLocationCells(locations2);
+
         boolean isAlive = true;
 
         while(isAlive == true){
@@ -26,5 +28,4 @@ public class DotComGame {
             }
         }
     }
-}
-*/
+}*/

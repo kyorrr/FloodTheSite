@@ -1,11 +1,11 @@
-/*import java.io.*;
+import java.io.*;
 import java.util.*;
 
 public class GameHelper {
     private static final String alphabet = "abcdefg";
-    private int gridLength = 7;
-    private int gridSize = 49;
-    private int[] grid = new int[gridSize];
+    final private int gridLength = 5;
+    final private int gridSize = 25;
+    final private int[] grid = new int[gridSize];
     private int comCount = 0;
 
     public String getUserInput(String prompt){
@@ -21,7 +21,8 @@ public class GameHelper {
         return inputLine.toLowerCase();
     }
     public ArrayList<String> placeSuperDotCom (int comSize){
-        ArrayList<String> alphaCells = new ArrayList<String>();
+        ArrayList<String> alphaCells = new ArrayList<>();
+
         String[] alphacoords = new String[comSize];
         String temp = null;
         int[] coords = new int[comSize];
@@ -36,7 +37,7 @@ public class GameHelper {
         }
         while(!success & attempts++ < 200){
             location = (int) (Math.random() * gridSize);
-            System.out.println("пробуем " + location);
+            //System.out.println("пробуем " + location);
             int x = 0;
             success = true;
             while(success && x < comSize){
@@ -50,7 +51,7 @@ public class GameHelper {
                         success = false;
                     }
                 } else {
-                    System.out.println("используется " + location);
+                    //System.out.println("используется " + location);
                     success = false;
                 }
             }
@@ -72,4 +73,4 @@ public class GameHelper {
         System.out.println("\n");
         return alphaCells;
     }
-}*/
+}
